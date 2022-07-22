@@ -35,6 +35,7 @@ import Button from "~/components/Button";
 import Menu from "~/components/Popper/Menu";
 import { faTiktok } from "@fortawesome/free-brands-svg-icons";
 
+import Image from "~/components/Images";
 const cx = classNames.bind(styles);
 
 const MENU_ITEMS = [
@@ -178,7 +179,7 @@ function Header() {
 
           <Menu items={currentUser ? USER_MENU : MENU_ITEMS} onChange={handleMenuChange} >
             {currentUser ? (
-              <img
+              <Image
                 className={cx("user-avatar")}
                 src="https://www.sports-king.com/images/nicknames/lionel-messi.jpg"
                 alt="Nguyen Van A"
