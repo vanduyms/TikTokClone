@@ -104,6 +104,7 @@
 
 .actions {
   display: flex;
+  align-items: center;
 }
 
 .more-btn {
@@ -115,3 +116,23 @@
 }
 
 // Menu
+
+// User
+.action-btn {
+  padding: 4px;
+  font-size: 2rem;
+  cursor: pointer;
+  background-color: transparent;
+
+  + .action-btn {
+    margin-left: 16px;
+  }
+}
+
+.user-avatar {
+  margin-left: 16px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border-radius: 50%;
+}
