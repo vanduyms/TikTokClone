@@ -4,24 +4,27 @@ import styles from "./AccountItem.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
+import { Link } from "react-router-dom";
+import Image from "~/components/Images";
+
 const cx = classNames.bind(styles);
 
-function AccountItem() {
+function AccountItem({ data }) {
   return (
-    <div className={cx("wrapper")}>
-      <img
+    <Link className={cx("wrapper")} to={`@${data.nickname}`} >
+      <Image
         className={cx("avatar")}
-        src="https://static1.bestie.vn/Mlog/ImageContent/202112/cau-be-chau-phi-gay-sot-khi-hat-con-co-be-be-noi-tieng-viet-cuc-soi-9a34c4.jpg"
-        alt="Avatar"
+        src={data.avatar}
+        alt={data.full_name}
       />
       <div className={cx("info")}>
         <p className={cx("name")} >
-          <span>Nguyen Van A</span>
-          <FontAwesomeIcon className={cx("icon-check")} icon={faCheckCircle} />
+          <span>{data.full_name}</span>
+          {data.tick && <FontAwesomeIcon className={cx("icon-check")} icon={faCheckCircle} />}
         </p>
-        <p className={cx("username")}>nguyenvana</p>
+        <p className={cx("username")}>{`@${data.nickname}`}</p>
       </div>
-    </div>
+    </Link >
   );
 }
 
