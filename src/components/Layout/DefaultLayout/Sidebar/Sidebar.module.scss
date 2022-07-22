@@ -1,3 +1,34 @@
 .wrapper {
   width: 356px;
+  padding: 20px 0 26px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(22, 24, 35, 0.24);
+}
+
+.menu-item {
+  padding: 8px;
+  color: rgba(22, 24, 35, 1);
+  font-family: "IBM Plex Sans", ProximaNova, Arial, Tahoma, PingFangSC,
+    sans-serif;
+  font-weight: 700;
+}
+
+.menu-item.active {
+  color: var(--primary);
+}
+
+.menu-item__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.menu-item__title {
+  font-size: 1.8rem;
+  line-height: 25px;
+  margin-left: 8px;
 }
