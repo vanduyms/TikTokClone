@@ -17,7 +17,7 @@ import {
   faSearch
 } from "@fortawesome/free-solid-svg-icons";
 
-import * as searchServices from "~/apiServices/searchServices";
+import * as searchServices from "~/services/searchService";
 
 const cx = classNames.bind(styles);
 
