@@ -33,6 +33,13 @@ function Search() {
 
   const debounced = useDebounce(searchValue, 500);
 
+  const handleChange = (e) => {
+    const searchValue = e.target.value;
+
+    if (!searchValue.startsWith(" ")) {
+      setSearchValue(e.target.value)
+    }
+  }
   useEffect(() => {
     if (!debounced.trim()) {
       setSearchResult([]);
@@ -80,7 +87,7 @@ function Search() {
           value={searchValue}
           className={cx("input")}
           placeholder="Search accounts and videos"
-          onChange={e => setSearchValue(e.target.value)}
+          onChange={handleChange}
           onFocus={() => setShowResult(true)}
         />
 

@@ -24,6 +24,8 @@ import { Link } from "react-router-dom";
 
 import Search from "../Search";
 
+import routesConfig from "~/config/routes";
+
 import Button from "~/components/Button";
 import Menu from "~/components/Popper/Menu";
 import { faTiktok } from "@fortawesome/free-brands-svg-icons";
@@ -99,7 +101,7 @@ function Header() {
   return (
     <header className={cx("wrapper")}>
       <div className={cx("inner")}>
-        <Link to="/" className={cx("logo")}>
+        <Link to={routesConfig.home} className={cx("logo")}>
           <img src={images.logo} alt="TikTok" />
         </Link>
 
