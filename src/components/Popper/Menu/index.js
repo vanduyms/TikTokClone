@@ -40,14 +40,14 @@ function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn 
       placement="bottom-end"
       hideOnClick={hideOnClick}
       offset={[12, 8]}
-      delay={[0, 700]}
+      delay={[0, 200]}
       render={attr => (
         <div className={cx("menu-list")} tabIndex="-1" {...attr}>
           <PopperWrapper>
             {history.length > 1 && <Header title="Languague" onBack={() => {
               setHistory(prev => prev.slice(0, prev.length - 1))
             }} />}
-            {renderItems()}
+            <div className={cx("menu-body")}>{renderItems()}</div>
           </PopperWrapper>
         </div>
       )}

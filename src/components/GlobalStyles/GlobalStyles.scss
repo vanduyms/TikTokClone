@@ -29,6 +29,26 @@ body {
   text-rendering: optimizeSpeed;
 }
 
+html *::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+html *::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+html *::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* Handle on hover */
+html *::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.07);
+}
+
 button,
 input,
 [tabindex] {

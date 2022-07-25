@@ -37,10 +37,15 @@
   margin-bottom: 8px;
 }
 
+.menu-body {
+  overflow-y: auto;
+}
+
 // Header
 .header {
   margin-top: -8px;
   position: relative;
+  flex-shrink: 0;
   height: 50px;
   width: 200px;
 }
