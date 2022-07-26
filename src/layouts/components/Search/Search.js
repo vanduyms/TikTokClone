@@ -31,13 +31,13 @@ function Search() {
 
   const inputRef = useRef();
 
-  const debounced = useDebounce(searchValue, 500);
+  const debounced = useDebounce(searchValue, 300);
 
   const handleChange = (e) => {
     const searchValue = e.target.value;
 
     if (!searchValue.startsWith(" ")) {
-      setSearchValue(e.target.value)
+      setSearchValue(searchValue)
     }
   }
   useEffect(() => {
@@ -65,8 +65,8 @@ function Search() {
   return (
     <div>
       <HeadlessTippy
-        visible={showResult && searchResult.length > 0}
         interactive
+        visible={showResult && searchResult.length > 0}
         appendTo={() => document.body}
         render={attr => (
           <div className={cx("search-result")} tabIndex="-1" {...attr}>
@@ -89,6 +89,7 @@ function Search() {
             value={searchValue}
             className={cx("input")}
             placeholder="Search accounts and videos"
+            spellCheck={false}
             onChange={handleChange}
             onFocus={() => setShowResult(true)}
           />

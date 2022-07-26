@@ -56,7 +56,8 @@ input,
   outline: none;
 }
 
-a[href] {
+a {
+  text-align: center;
   color: var(--text-color);
   text-decoration: none;
 }
