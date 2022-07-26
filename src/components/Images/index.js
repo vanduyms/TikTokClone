@@ -3,8 +3,10 @@ import images from "~/assets/images";
 import styles from "./Image.module.scss";
 import classNames from "classnames";
 
+import PropTypes from 'prop-types';
 
-function Image({ src, alt, className, ...props }, ref) {
+
+const Image = forwardRef(({ src, alt, className, ...props }, ref) => {
   const [fallback, setFallBack] = useState("");
 
   const handleError = () => {
@@ -21,6 +23,12 @@ function Image({ src, alt, className, ...props }, ref) {
       onError={handleError}
     />
   );
+})
+
+Image.propTypes = {
+  src: PropTypes.string,
+  alt: PropTypes.string,
+  classNames: PropTypes.node,
 }
 
-export default forwardRef(Image);
+export default Image;
