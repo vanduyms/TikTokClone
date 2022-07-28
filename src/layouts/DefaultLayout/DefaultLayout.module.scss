@@ -7,11 +7,14 @@
 .container {
   margin-top: var(--default-layout-header-height);
   padding: 0 var(--default-layout-spacer);
-  max-width: 100%;
   width: var(--default-layout-width);
   display: flex;
+  justify-content: space-between;
+  align-self: center;
+  max-width: 1150px;
+  flex: 1 1 auto;
 }
 
 .content {
-  flex: 1;
+  flex: auto;
 }
